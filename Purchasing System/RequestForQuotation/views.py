@@ -221,6 +221,7 @@ def requestforquotationdetails(request):
     print(pr)
 
     #send email to vendor
+    from prettytable import PrettyTable
     x = PrettyTable()
 
     x.field_names = ["Item ID","Item Name","Quantity","Unit Price","Total Price"]
