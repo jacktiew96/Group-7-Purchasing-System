@@ -21,6 +21,9 @@
 
 /*! normalize.css v2.1.0 | MIT License | git.io/normalize */
 
+.menu {
+    padding-left: 37%;
+}
 article,
 aside,
 details,
@@ -52,9 +55,9 @@ audio:not([controls]) {
 }
 
 html {
-  font-family: sans-serif;
-  -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
+    font-family: 'Lato', sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
 }
 
 body {
@@ -103,8 +106,8 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace, serif;
-  font-size: 1em;
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
 }
 
 pre {
@@ -162,9 +165,9 @@ button,
 input,
 select,
 textarea {
-  margin: 0;
-  font-family: inherit;
-  font-size: 100%;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 100%;
 }
 
 button,
@@ -311,20 +314,20 @@ html {
 }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.428571429;
-  color: #333333;
-  background-color: #ffffff;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #333333;
+    background-color: #ffffff;
 }
 
 input,
 button,
 select,
 textarea {
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
+    font-family: 'Lato', sans-serif;
+    font-size: inherit;
+    line-height: inherit;
 }
 
 button,
@@ -473,9 +476,9 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 500;
-  line-height: 1.1;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    line-height: 1.1;
 }
 
 h1 small,
@@ -712,7 +715,7 @@ address {
 
 code,
 pre {
-  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+    font-family: 'Lato', sans-serif;
 }
 
 code {
@@ -1682,9 +1685,9 @@ select[size] {
 }
 
 select optgroup {
-  font-family: inherit;
-  font-size: inherit;
-  font-style: inherit;
+    font-family: 'Lato', sans-serif;
+    font-size: inherit;
+    font-style: inherit;
 }
 
 input[type="file"]:focus,
@@ -2395,20 +2398,20 @@ input[type="button"].btn-block {
 }
 
 @font-face {
-  font-family: 'Glyphicons Halflings';
-  src: url('../fonts/glyphicons-halflings-regular.eot');
-  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+    font-family: 'Lato', sans-serif;
+    src: url('../fonts/glyphicons-halflings-regular.eot');
+    src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
 }
 
 .glyphicon {
-  position: relative;
-  top: 1px;
-  display: inline-block;
-  font-family: 'Glyphicons Halflings';
-  -webkit-font-smoothing: antialiased;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Lato', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
 }
 
 .glyphicon-asterisk:before {
@@ -6121,11 +6124,11 @@ body.modal-open,
 
 .carousel-control .icon-prev,
 .carousel-control .icon-next {
-  width: 20px;
-  height: 20px;
-  margin-top: -10px;
-  margin-left: -10px;
-  font-family: serif;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    margin-left: -10px;
+    font-family: 'Lato', sans-serif;
 }
 
 .carousel-control .icon-prev:before {
