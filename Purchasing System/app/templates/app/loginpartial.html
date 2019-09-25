@@ -2,10 +2,48 @@
 <form id="logoutForm" action="/logout" method="post" class="navbar-right">
     {% csrf_token %}
     <ul class="nav navbar-nav navbar-right">
-        <li><span class="navbar-brand">Hello {{ user.username }}!</span></li>
-        <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+
+        <li>
+        <div class="container">
+	<div class="row">
+        <div class="dropdown">
+            <a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-primary" data-target="#" href="#" style="margin-top:7px; background-color:black;">
+                Hello, {{ user.username }}!<span class="caret"></span>
+            </a>
+    		<ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+              <li class="dropdown-submenu">
+                <a tabindex="-1" href="#">Item</a>
+                <ul class="dropdown-menu">
+                  <li><a tabindex="-1" href="/admin/app/item/add/">Add Item</a></li>
+                  <li><a tabindex="-1" href="admin/app/item/">Change Item</a></li>
+                </ul>
+              </li>                  
+              <li class="dropdown-submenu">
+                <a tabindex="-1" href="#">Person</a>
+                <ul class="dropdown-menu">
+                  <li><a tabindex="-1" href="/admin/app/person/add/">Add Person</a></li>
+                  <li><a tabindex="-1" href="/admin/app/person/">Change Person</a></li>
+                </ul>                  
+               </li>
+                <li class="dropdown-submenu">
+                <a tabindex="-1" href="#">Vendor</a>
+                <ul class="dropdown-menu">
+                  <li><a tabindex="-1" href="/admin/app/vendor/add/">Add Change</a></li>
+                  <li><a tabindex="-1" href="admin/app/vendor/">Change Vendor</a></li>
+                </ul>                  
+               </li>
+                <li><a href= "/admin">More settings</a></li>
+              <li class="divider"></li>
+              <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+            </ul>
+        </div>
+	</div>
+</div>
+        </li>
+
     </ul>
 </form>
+
 
 {% else %}
 
