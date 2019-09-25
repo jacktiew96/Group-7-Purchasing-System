@@ -8,6 +8,54 @@
     <link rel="stylesheet" type="text/css" href="{% static 'app/content/bootstrap.min.css' %}" />
     <link rel="stylesheet" type="text/css" href="{% static 'app/content/site.css' %}" />
     <script src="{% static 'app/scripts/modernizr-2.6.2.js' %}"></script>
+    <style>
+        
+    .dropdown {
+      
+    display: inline-block;
+
+    }
+   
+    .dropdown .dropbtn  {
+        padding-top : 13px;
+        font-size: 16px;  
+        border: none;
+        outline: none;
+        color: rgb(128, 128, 128);
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+    }
+
+    .dropdown:hover .dropbtn:hover {
+        color: white;
+    }
+
+    .dropdown-content {
+        display: none;
+        
+       
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    </style>
 </head>
 
 <body>
@@ -28,7 +76,62 @@
                     <li><a href="{% url 'contact' %}">Contact</a></li>
                 </ul>
                 {% include 'app/loginpartial.html' %}
+                <div class="dropdown">
+    <button class="dropbtn"><a href="{% url 'menu'%}">Menu</a>
+    </button>
+    <div class="dropdown-content">
+        
+      <form class="margintop" action='purchaserequisitionform' method='GET'>
+        <button type="submit" class="btn btn-info">Create Purchase Requisition</button>
+      </form>
+     <form class="margintop" action='purchaserequisitionhistory' method='GET'>
+        <button type="submit" class="btn btn-outline-info waves-effect">View Purchase Requisition</button>
+        </form>
+    <form class="margintop" action='requestforquotationform' method='GET'>
+        <button type="submit" class="btn btn-info">Create Request For Quotation</button>
+    </form>
+      <form class="margintop" action='requestforquotationhistory' method='GET'>
+        <button type="submit" class="btn btn-outline-info waves-effect">View Request For Quotation</button>
+    </form>
+        
+    <form class="margintop" action='quotationform' method='GET'>
+        <button type="submit" class="btn btn-info">Record Quotation</button>
+    </form>
+        
+    <form class="margintop" action='quotationhistory' method='GET'>
+        <button type="submit" class="btn btn-outline-info waves-effect">View Quotation</button>
+    </form>
+        
+    <form class="margintop" action='purchaseorderform' method='GET'>
+        <button type="submit" class="btn btn-info">Issue Purchase Order</button>
+    </form>
+        
+    <form class="margintop" action='purchaseorderhistory' method='GET'>
+        <button type="submit" class="btn btn-outline-info waves-effect">View Purchase Order</button>
+    </form>
+        
+            
+        
+    <form class="margintop" action='deliveryorderform' method='GET'>
+        <button type="submit" class="btn btn-info">Record Delivery Order</button>
+    </form>
+        
+    <form class="margintop" action='deliveryorderhistory' method='GET'>
+        <button type="submit" class="btn btn-outline-info waves-effect">View Delivery Order</button>
+    </form>
+      
+    <form class="margintop" action='invoiceform' method='GET'>
+        <button type="submit" class="btn btn-info">Record Invoice</button>
+    </form>
+       
+    <form class="margintop" action='invoicehistory' method='GET'>
+        <button type="submit" class="btn btn-outline-info waves-effect">Invoice History</button>
+    </form>
+            
+    </div>
+  </div>
             </div>
+            
         </div>
     </div>
 
