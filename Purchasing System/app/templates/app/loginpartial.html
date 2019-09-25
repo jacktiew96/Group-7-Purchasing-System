@@ -2,7 +2,6 @@
 <form id="logoutForm" action="/logout" method="post" class="navbar-right">
     {% csrf_token %}
     <ul class="nav navbar-nav navbar-right">
-
         <li>
         <div class="container">
 	<div class="row">
@@ -42,15 +41,10 @@
 	</div>
 </div>
         </li>
-
     </ul>
 </form>
-
-
 {% else %}
-
 <ul class="nav navbar-nav navbar-right">
     <li><a href="{% url 'login' %}">Log in</a></li>
 </ul>
-
 {% endif %}
