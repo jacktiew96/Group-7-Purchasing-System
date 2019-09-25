@@ -226,7 +226,6 @@ def requestforquotationdetails(request):
     #x.field_names = ["Item ID","Item Name","Quantity","Unit Price","Total Price"]
 
     #for item in items:
-        #x.add_row([item['item_id'],item['item_name'],item['quantity'],item['unit_price'],item['total_price']])
 
     #subject = 'REQUEST FOR QUOTATION INFORMATION: '+ rfq_id
     #message = 'This is the Request of Quotation Order Information: \n'+'Person In Charge: '+staff_info.person_name+'\n'+staff_info.person_address+ '\n' +'Request of Quotation Number: ' + rfq_id + '\n'+ '\n'+'Time Issued: ' + str(current_time) + '\n'+'Vendor ID: ' + vendor_id + '\n'+'Description: ' + description + '\n'+ str(x) +'\n'
