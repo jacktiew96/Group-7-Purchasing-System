@@ -221,19 +221,19 @@ def requestforquotationdetails(request):
     print(pr)
 
     #send email to vendor
-    x = PrettyTable()
+    #x = PrettyTable()
 
-    x.field_names = ["Item ID","Item Name","Quantity","Unit Price","Total Price"]
+    #x.field_names = ["Item ID","Item Name","Quantity","Unit Price","Total Price"]
 
-    for item in items:
-        x.add_row([item['item_id'],item['item_name'],item['quantity'],item['unit_price'],item['total_price']])
+    #for item in items:
+        #x.add_row([item['item_id'],item['item_name'],item['quantity'],item['unit_price'],item['total_price']])
 
-    subject = 'REQUEST FOR QUOTATION INFORMATION: '+ rfq_id
-    message = 'This is the Request of Quotation Order Information: \n'+'Person In Charge: '+staff_info.person_name+'\n'+staff_info.person_address+ '\n' +'Request of Quotation Number: ' + rfq_id + '\n'+ '\n'+'Time Issued: ' + str(current_time) + '\n'+'Vendor ID: ' + vendor_id + '\n'+'Description: ' + description + '\n'+ str(x) +'\n'
+    #subject = 'REQUEST FOR QUOTATION INFORMATION: '+ rfq_id
+    #message = 'This is the Request of Quotation Order Information: \n'+'Person In Charge: '+staff_info.person_name+'\n'+staff_info.person_address+ '\n' +'Request of Quotation Number: ' + rfq_id + '\n'+ '\n'+'Time Issued: ' + str(current_time) + '\n'+'Vendor ID: ' + vendor_id + '\n'+'Description: ' + description + '\n'+ str(x) +'\n'
 
-    email_from = settings.EMAIL_HOST_USER
-    recipient_list = [vendor_info.vendor_email,]
-    send_mail( subject, message, email_from, recipient_list )
+    #email_from = settings.EMAIL_HOST_USER
+    #recipient_list = [vendor_info.vendor_email,]
+    #send_mail( subject, message, email_from, recipient_list )
 
     # info pass to html
     context = {
