@@ -11,47 +11,54 @@
     <script src="{% static 'app/scripts/modernizr-2.6.2.js' %}"></script>
     <style>
 
-        .dropdown {
-            display: inline-block;
-        }
+        
+    .dropdown {
+      
+    display: inline-block;
 
-            .dropdown .dropbtn {
-                padding-top: 13px;
-                font-size: 16px;
-                border: none;
-                outline: none;
-                color: rgb(128, 128, 128);
-                background-color: inherit;
-                font-family: inherit;
-                margin: 0;
-            }
+    }
+   
+    .dropdown .dropbtn  {
+        padding-top : 13px;
+        font-size: 16px;  
+        border: none;
+        outline: none;
+        color: rgb(128, 128, 128);
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+    }
 
-            .dropdown:hover .dropbtn:hover {
-                color: white;
-            }
+    .dropdown:hover .dropbtn:hover {
+        color: white;
+    }
 
-        .dropdown-content {
-            display: none;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-        }
+    .dropdown-content {
+        display: none;
+        
+       
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
 
-            .dropdown-content a {
-                float: none;
-                color: black;
-                padding: 12px 16px;
-                text-decoration: none;
-                display: block;
-                text-align: left;
-            }
+    .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
 
-                .dropdown-content a:hover {
-                    background-color: #ddd;
-                }
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
 
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+ 
     </style>
 </head>
 
@@ -68,10 +75,11 @@
             </div>
             <div class="navbar-collapse collapse">
 
+
                 {% if user.is_authenticated %}
                          
           <div class="dropdown">
-    <button class="dropbtn"><a href="{% url 'menu'%}">Menu</a>
+    <button class="dropbtn"><a href="{% url 'menu'%}">Quick Access</a>
     </button>
     <div class="dropdown-content">
         
@@ -134,7 +142,7 @@
 
                 </ul>
                 {% include 'app/loginpartial.html' %}
-               
+
             </div>
             
         </div>
