@@ -1,14 +1,16 @@
-﻿<!DOCTYPE html>
+﻿   <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }} - My Django Application</title>
     {% load staticfiles %}
-    <link rel="stylesheet" type="text/css" href="{% static 'app/content/bootstrap.min.css' %}" />
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/bootstrap.css' %}" />
     <link rel="stylesheet" type="text/css" href="{% static 'app/content/site.css' %}" />
     <script src="{% static 'app/scripts/modernizr-2.6.2.js' %}"></script>
     <style>
+
         
     .dropdown {
       
@@ -55,6 +57,8 @@
     .dropdown:hover .dropdown-content {
         display: block;
     }
+
+ 
     </style>
 </head>
 
@@ -70,9 +74,12 @@
                 <a href="/" class="navbar-brand">Purchasing System</a>
             </div>
             <div class="navbar-collapse collapse">
+
+
                 {% if user.is_authenticated %}
-                <div class="dropdown">
-    <button class="dropbtn"><a href="{% url 'menu'%}">Menu</a>
+                         
+          <div class="dropdown">
+    <button class="dropbtn"><a href="{% url 'menu'%}">Quick Access</a>
     </button>
     <div class="dropdown-content">
         
@@ -80,13 +87,13 @@
         <button type="submit" class="btn btn-info">Create Purchase Requisition</button>
       </form>
      <form class="margintop" action='purchaserequisitionhistory' method='GET'>
-        <button type="submit" class="btn btn-outline-info waves-effect">View Purchase Requisition</button>
+        <button type="submit" class="btn_2">View Purchase Requisition</button>
         </form>
     <form class="margintop" action='requestforquotationform' method='GET'>
         <button type="submit" class="btn btn-info">Create Request For Quotation</button>
     </form>
       <form class="margintop" action='requestforquotationhistory' method='GET'>
-        <button type="submit" class="btn btn-outline-info waves-effect">View Request For Quotation</button>
+        <button type="submit" class="btn_2">View Request For Quotation</button>
     </form>
         
     <form class="margintop" action='quotationform' method='GET'>
@@ -94,7 +101,7 @@
     </form>
         
     <form class="margintop" action='quotationhistory' method='GET'>
-        <button type="submit" class="btn btn-outline-info waves-effect">View Quotation</button>
+        <button type="submit" class="btn_2">View Quotation</button>
     </form>
         
     <form class="margintop" action='purchaseorderform' method='GET'>
@@ -102,7 +109,7 @@
     </form>
         
     <form class="margintop" action='purchaseorderhistory' method='GET'>
-        <button type="submit" class="btn btn-outline-info waves-effect">View Purchase Order</button>
+        <button type="submit" class="btn_2">View Purchase Order</button>
     </form>
         
             
@@ -112,7 +119,7 @@
     </form>
         
     <form class="margintop" action='deliveryorderhistory' method='GET'>
-        <button type="submit" class="btn btn-outline-info waves-effect">View Delivery Order</button>
+        <button type="submit" class="btn_2">View Delivery Order</button>
     </form>
       
     <form class="margintop" action='invoiceform' method='GET'>
@@ -120,19 +127,22 @@
     </form>
        
     <form class="margintop" action='invoicehistory' method='GET'>
-        <button type="submit" class="btn btn-outline-info waves-effect">Invoice History</button>
+        <button type="submit" class="btn_2">Invoice History</button>
     </form>
             
     </div>
   </div>
                 {% endif %}
+
                 <ul class="nav navbar-nav">
                     <li><a href="{% url 'home' %}">Home</a></li>
                     <li><a href="{% url 'about' %}">About</a></li>
                     <li><a href="{% url 'contact' %}">Contact</a></li>
+                    <li><a href="{% url 'menu' %}">Menu</a></li>
+
                 </ul>
                 {% include 'app/loginpartial.html' %}
-                
+
             </div>
             
         </div>
