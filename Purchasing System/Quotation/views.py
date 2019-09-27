@@ -66,11 +66,10 @@ def quotationconfirmation(request):
     quo_id = request.POST['quotation_id']
     request_for_quotation_id = request.POST['request_for_quotation_id']
     user_id  = request.user.id
-    staff = Person.objects.get(user_id = user_id)
+    
 
     vendor_id = request.POST['vendor_id']
     description = request.POST['description']
-    vendor_info = Vendor.objects.get(vendor_id = vendor_id)
     
     responses = request.read()
     print(responses)
@@ -104,24 +103,28 @@ def quotationconfirmation(request):
         grand_total = grand_total + total
     print(items)
 
+    
+    try:
+        staff = Person.objects.get(user_id = user_id)
+        vendor_info = Vendor.objects.get(vendor_id = vendor_id)
 
-
-
-    context = {
-            'title': 'Quotation Confirmation',
-            'request_for_quotation_id' : request_for_quotation_id,
-            'quotation_id' : quo_id,
-            'staff_id' : staff.person_id,
-            'vendor_id' : vendor_id,
-            'grand_total': grand_total,
-            'rows' : items,
-            'staff_info' : staff,
-            'vendor_info' : vendor_info,
-            'description' : description
-        }
-
-
-    return render(request,'Quotation/quotationconfirmation.html',context)
+        context = {
+					'title': 'Quotation Confirmation',
+					'request_for_quotation_id' : request_for_quotation_id,
+					'quotation_id' : quo_id,
+					'staff_id' : staff.person_id,
+					'vendor_id' : vendor_id,
+					'grand_total': grand_total,
+					'rows' : items,
+					'staff_info' : staff,
+					'vendor_info' : vendor_info,
+					'description' : description
+				}
+        return render(request,'Quotation/quotationconfirmation.html',context)
+    except Vendor.DoesNotExist:
+        context = {'error' : 'Please fill in the information needed',
+				   'title' : 'Request For Quotation Form',}
+        return render(request, 'Quotation/quotationform.html', context)
 
  
 def quotationdetails(request):

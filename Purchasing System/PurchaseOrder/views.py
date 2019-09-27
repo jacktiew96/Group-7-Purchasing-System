@@ -11,6 +11,7 @@ from django.db import models
 from datetime import datetime
 
 #database
+from prettytable import PrettyTable
 from app.models import Person,Item,Vendor
 from Quotation.models import Quotation, QuotationItem
 from PurchaseOrder.models import PurchaseOrder,PurchaseOrderItem
